@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.sourcecloud.moviep.model.Moviep;
 import com.sourcecloud.moviep.service.MoviepService;
+import com.sourcecloud.moviep.service.impl.MoviepServiceImpl;
 
 
 @RestController
@@ -19,7 +21,8 @@ public class MoviepController {
 
 	
 	@Autowired
-	private MoviepService moviepService; 
+	@Qualifier("movie")
+	private MoviepService moviepService;
 	
     @GetMapping
 	public List<Moviep> getMoviep(@RequestParam(required=false) String LeadActor) {

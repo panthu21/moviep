@@ -4,6 +4,7 @@ com/sourcecloud/moviep/model/Moviep.class
 com/sourcecloud/moviep/model/Director.class
 com/sourcecloud/moviep/service/DirectorService.class
 com/sourcecloud/moviep/service/MoviepService.class
+com/sourcecloud/moviep/service/impl/SaiImpl.class
 com/sourcecloud/moviep/controller/DirectorController.class
 com/sourcecloud/moviep/dao/impl/DirectorDaoImpl.class
 com/sourcecloud/moviep/service/impl/MoviepServiceImpl.class

@@ -32,7 +32,7 @@ public class MoviepDaoImpl implements MoviepDao {
 		List<Moviep> movieps = new ArrayList<Moviep>();
 		
 		
-		List<Map<String, Object>> rows =  moviepTemplate.queryForList("SELECT * FROM MOVIEP");
+		List<Map<String, Object>> rows =  moviepTemplate.queryForList("SELECT *  FROM public.\"Moviep\"");
 		
 		for (Map<String, Object> row : rows) {
 			
@@ -42,8 +42,8 @@ public class MoviepDaoImpl implements MoviepDao {
 			mv.setReleaseDate((String)row.get("ReleaseDate"));
 			mv.setLeadActor((String)row.get("LeadActor"));
 			mv.setLeadActress((String)row.get("LeadActress"));
-			mv.setDirector((String)row.get("MoviepDao"));
-			mv.setProdectionHouse((String)row.get("ProdectionHouse"));
+			mv.setDirector((String)row.get("direction"));
+			mv.setProdectionHouse((String)row.get("prodectionhouse"));
 			movieps.add(mv);
 		}
 		

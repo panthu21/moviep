@@ -10,7 +10,7 @@ import com.sourcecloud.moviep.dao.MoviepDao;
 import com.sourcecloud.moviep.model.Moviep;
 import com.sourcecloud.moviep.service.MoviepService;
 
-@Component
+@Component("movie")
 public class MoviepServiceImpl implements MoviepService {
 
 	@Autowired
